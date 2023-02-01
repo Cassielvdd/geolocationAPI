@@ -21,3 +21,6 @@ referrerpolicy="no-referrer-when-downgrade"
 https://cassielvdd.github.io/geolocationAPI/
 <img src='/image.png' alt='image'>
 <h2>Alguns navegadores bloqueiam a <strong>API ipstack</strong> que funciona para buscar o IP do cliente no botão #my-loc, então é necessario habilitar o HTTP do seu navegador ou usar outra API ☺</h2>
+
+<a href='instagram.com/p_cassiel.js'><img src='https://user-images.githubusercontent.com/78943198/215931375-62afc559-6997-44ce-8cb5-bc5d25964e74.png' style='width:30px; height:30px'></a>
+
