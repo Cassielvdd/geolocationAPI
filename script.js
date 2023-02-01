@@ -1,3 +1,5 @@
+//Codigo abaixo pega a localização atual do usúario e mostra no mapa, mas esta com alguns bugs por isso está comentado
+
 // document
 //   .querySelector("html")
 //   .addEventListener("DOMSubtreeModified", (event) => {
@@ -16,8 +18,8 @@
 //     });
 //   });
 
-document.querySelector("#search").addEventListener("click", (event) => {
-  event.preventDefault();
+function rodatudo() {
+  //Consumo da API que pega a Geolocalização do Usúario
   const valuefor = document.querySelector("#buscar").value;
   const url = `https://api.radar.io/v1/search/autocomplete?query=${valuefor}`;
 
@@ -29,21 +31,27 @@ document.querySelector("#search").addEventListener("click", (event) => {
   fetch(url, options)
     .then((res) => res.json())
     .then((data) => {
+      //abaixo um codigo Jquery para ativar a notificação BOOTSTRAP quando da erro
       document.querySelector(".close").addEventListener("click", () => {
         $(".toast").toast("hide");
       });
-      //   Notification.requestPermission();
+
       if (data.addresses[0] == undefined) {
-        //&&
-        //Notification?.permission === "granted"
         $(".toast").toast("show");
       }
-      console.log(
-        data["addresses"][0]["latitude"],
-        data["addresses"][0]["longitude"]
-      );
+      //abaixo está o codigo que muda a URL do iframe do google maps para pegar os dados que vem das APIs
       document.querySelector(
         "iframe"
       ).src = `https://maps.google.com.br/maps?q=${data["addresses"][0]["latitude"]}, ${data["addresses"][0]["longitude"]}&output=embed&dg=oo`;
     });
+}
+//events
+document.querySelector("#search").addEventListener("click", (event) => {
+  event.preventDefault();
+  rodatudo();
+});
+document.querySelector("#buscar").addEventListener("keyup", (e) => {
+  if (e.code == "Enter") {
+    rodatudo();
+  }
 });
