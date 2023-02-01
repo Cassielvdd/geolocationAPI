@@ -24,14 +24,26 @@ iframe {
   flex-direction: column;
 }
 .content input {
+  display: flex;
   width: 20vw;
   padding: 10px;
   margin-top: 10px;
-  border: 1px solid black;
+  border: none;
+  border-bottom: 2px solid black;
   outline: none;
-  border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 1px;
+  background-color: rgb(158, 157, 157, 0);
+  text-shadow: 1px 1px 1px white;
+  font-weight: 600;
 }
+.content input::placeholder {
+  display: flex;
+  text-shadow: 1px 1px 1px rgb(209, 207, 207);
+  opacity: 1;
+  color: rgb(22, 22, 22);
+  font-weight: 600;
+}
+
 .container button {
   cursor: pointer;
   margin-top: 10px;
@@ -70,6 +82,12 @@ iframe {
   padding: 10px;
   outline: none;
   border: 1px solid black;
+  background-color: transparent;
+  border: none;
+}
+#search i {
+  color: blue;
+  text-shadow: 1px 2px 1px black;
 }
 #my-loc {
   display: flex;
@@ -80,6 +98,8 @@ iframe {
   margin-right: 10px;
   border: 1px solid blue;
   box-sizing: border-box;
+  background-color: transparent;
+  border: none;
 }
 #my-loc i {
   color: rgb(68, 68, 252);
