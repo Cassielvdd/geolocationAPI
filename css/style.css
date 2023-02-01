@@ -71,6 +71,19 @@ iframe {
   outline: none;
   border: 1px solid black;
 }
+#my-loc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 4vw;
+  margin-right: 10px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+#my-loc i {
+  color: rgb(68, 68, 252);
+}
 @media (max-width: 650px) {
   .inputs {
     margin-top: 7vh;
@@ -83,6 +96,9 @@ iframe {
     width: 50vw;
   }
   #search {
+    width: 10vw;
+  }
+  #my-loc {
     width: 10vw;
   }
   .toast {

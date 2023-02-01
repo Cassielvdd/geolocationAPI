@@ -1,22 +1,19 @@
-//Codigo abaixo pega a localização atual do usúario e mostra no mapa, mas esta com alguns bugs por isso está comentado
-
-// document
-//   .querySelector("html")
-//   .addEventListener("DOMSubtreeModified", (event) => {
-//     $.getJSON("https://api.ipify.org?format=json", function (json) {
-//       fetch(`http://api.ipstack.com/${json.ip}?access_key=61f1abcc454376c7aa75fbf508c9e4ce
-// `)
-//         .then((res) => {
-//           return res.json();
-//         })
-//         .then((data) => {
-//           document.querySelector(
-//             "iframe"
-//           ).src = `https://maps.google.com.br/maps?q=${data["latitude"]}, ${data["longitude"]}&output=embed&dg=oo`;
-//           console.log(data["latitude"], data["longitude"]);
-//         });
-//     });
-//   });
+document.querySelector("#my-loc").addEventListener("click", () => {
+  $.getJSON("https://api.ipify.org?format=json", function (json) {
+    fetch(
+      `http://api.ipstack.com/${json.ip}?access_key=61f1abcc454376c7aa75fbf508c9e4ce `
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        document.querySelector(
+          "iframe"
+        ).src = `https://maps.google.com.br/maps?q=${data["latitude"]}, ${data["longitude"]}&output=embed&dg=oo`;
+        console.log(data["latitude"], data["longitude"]);
+      });
+  });
+});
 
 function rodatudo() {
   //Consumo da API que pega a Geolocalização do Usúario

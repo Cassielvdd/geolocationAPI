@@ -12,15 +12,16 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>My Maps</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="container">
       <div class="content">
         <div class="inputs">
+          <button type="button" class="button " id="my-loc" data-toggle="tooltip" data-placement="top" title="Localização atual do seu provedor de Internet"><i class="fa-solid fa-location-crosshairs"></i></button>
           <input type="text" name="" id="buscar" placeholder="Buscar Cidade"/>
-        <button type="submit" id="search"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+        <button type="submit" id="search" data-toggle="tooltip" data-placement="top" title="Buscar por Cidade ou Localização"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="map">
           <iframe
@@ -30,7 +31,7 @@
           style="border: 0"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-        <p id="ver">Versão 1.0.1 por Pedro Cassiel</p>
+        <p id="ver">Versão 1.0.4 por Pedro Cassiel</p>
         <div
         aria-live="polite"
         aria-atomic="true"
