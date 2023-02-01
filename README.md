@@ -1,4 +1,4 @@
-# geolocationAPI
+# Site de Geolocalização
 <h2>Site feito usando apis de geolocalização e iframe do Google Maps</h2><br>
 Projeto feito usando Html, Css, Javascript, Bootstrap e Jquery.
 <br>
